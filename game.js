@@ -84,31 +84,3 @@ function startOver() {
   gamePattern = [];
   started = false;
 }
-function adjustStyles() {
-  var screenWidth = window.innerWidth;
-
-  if (screenWidth <= 500) {
-    document.querySelector('.btn').style.margin = '10px';
-    document.querySelector('.btn').style.height = '130px';
-    document.querySelector('.btn').style.width = '130px';
-    document.querySelector('#level-title').style.fontSize = '24px';
-    document.querySelector('#level-title').style.marginTop = '20%';
-    document.querySelector('.normalbtn').style.marginTop = '20px';
-    document.querySelector('.normalbtn').style.display = 'inline-block';
-  } else {
-    // Reset styles to default if screen width is greater than 500px
-    document.querySelector('.btn').style.margin = '';
-    document.querySelector('.btn').style.height = '';
-    document.querySelector('.btn').style.width = '';
-    document.querySelector('#level-title').style.fontSize = '';
-    document.querySelector('#level-title').style.marginTop = '';
-    document.querySelector('.normalbtn').style.marginTop = '';
-    document.querySelector('.normalbtn').style.display = '';
-  }
-}
-
-// Call the function initially
-adjustStyles();
-
-// Call the function on window resize
-window.addEventListener('resize', adjustStyles);
